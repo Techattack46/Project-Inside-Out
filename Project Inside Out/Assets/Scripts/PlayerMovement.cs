@@ -4,6 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D playerBody;
+    public float jumpFloat;
+
+    private void Start()
+    {
+        playerBody = GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
@@ -16,6 +22,6 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         Debug.Log("Jumping now.");
-        playerBody.AddForce(Vector2.up, ForceMode2D.Impulse);
+        playerBody.AddForce(new Vector2(playerBody.linearVelocityX, jumpFloat));
     }
 }
