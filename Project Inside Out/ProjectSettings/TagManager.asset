@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Environment
   - Dummy
+  - Manager
   layers:
   - Default
   - TransparentFX

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6de943fb5d8d9a6428cc83c6acf6c793
+guid: ceae1b041bf234c4fba4ca5f0f8a590b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1271254284828038265
-    second: obj_box103_0
+      213: -6619971435479043612
+    second: baseballbat_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 30, y: 3, z: 56, w: 33}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obj_box103_0
+      name: baseballbat_01_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 2
-        width: 44
-        height: 94
+        x: 0
+        y: 0
+        width: 64
+        height: 498
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9745e52690764a110800000000000000
-      internalID: 1271254284828038265
+      spriteID: 4e1f905bd032124a0800000000000000
+      internalID: -6619971435479043612
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      obj_box103_0: 1271254284828038265
+      baseballbat_01_0: -6619971435479043612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

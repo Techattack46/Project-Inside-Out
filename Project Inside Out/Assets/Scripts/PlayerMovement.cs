@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D playerBody;
     public float jumpFloat;
+    public AudioClip jumpSound;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         Debug.Log("Jumping now.");
+        AudioManager.Instance.PlayClip(jumpSound);
         playerBody.AddForce(new Vector2(playerBody.linearVelocityX, jumpFloat));
     }
 }
