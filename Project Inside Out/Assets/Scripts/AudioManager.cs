@@ -21,6 +21,12 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        LevelMusicIndex(0);
+    }
+
     public void LevelMusicIndex(int index)
     {
         levelMusicSource.clip = levelMusic[index];
