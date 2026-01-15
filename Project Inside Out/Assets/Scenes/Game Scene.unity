@@ -185,7 +185,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.4980392, g: 1, b: 0, a: 1}
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   playerBody: {fileID: 288804645}
   isGrounded: 0
-  jumpFloat: 280
+  jumpFloat: 300
   jumpSound: {fileID: 8300000, guid: 31cad226b6f646a47a2ad840e297abf9, type: 3}
   walkSpeed: 0.1
   playerSprite: {fileID: 288804643}
@@ -672,6 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectGrab
   items: {fileID: 1174652693}
   minimumItemRange: 2.5
+  throwRange: 30
 --- !u!1 &353533865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1748,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1174652694}
     m_Modifications:
+    - target: {fileID: 469951894046111857, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_Size.x
       value: 0.64

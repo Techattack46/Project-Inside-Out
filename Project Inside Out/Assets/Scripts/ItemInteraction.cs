@@ -18,8 +18,6 @@ public class ItemInteraction : MonoBehaviour
                 transform.position = new Vector2(
                     player.transform.position.x - offset.x,
                     player.transform.position.y + offset.y);
-                
-                //transform.position = (Vector2)player.transform.position - offset; //except only x needs to be flipped
             }
             else
             {
