@@ -1753,6 +1753,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ceae1b041bf234c4fba4ca5f0f8a590b, type: 3}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -1768,6 +1772,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 288804642}
+    - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: offset.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: offset.y
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: playerSprite
       value: 
@@ -1822,7 +1834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8713393749737753048, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_Name
-      value: Item
+      value: Bat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
