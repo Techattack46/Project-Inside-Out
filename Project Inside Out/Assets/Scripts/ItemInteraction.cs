@@ -15,12 +15,16 @@ public class ItemInteraction : MonoBehaviour
         {
             if (playerSprite.flipX)
             {
+                GetComponent<SpriteRenderer>().flipX = true;
+                
                 transform.position = new Vector2(
                     player.transform.position.x - offset.x,
                     player.transform.position.y + offset.y);
             }
             else
             {
+                GetComponent<SpriteRenderer>().flipX = false;
+                
                 transform.position = (Vector2)player.transform.position + offset;
             }
         }
