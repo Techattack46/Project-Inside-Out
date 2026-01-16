@@ -7,6 +7,7 @@ public class ItemInteraction : MonoBehaviour
     public Vector2 offset;
     public bool lockedToPlayer;
 
+    public AudioClip dummyHitSound;
     public bool destroyedOnDummyHit;
 
     private void Update()

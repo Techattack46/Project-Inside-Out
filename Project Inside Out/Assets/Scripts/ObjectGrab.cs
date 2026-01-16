@@ -5,7 +5,9 @@ public class ObjectGrab : MonoBehaviour
     public GameObject items;
     private GameObject heldItem;
     public float minimumItemRange;
+    public AudioClip pickupSound;
     public float throwRange;
+    public AudioClip throwSound;
 
     private void Update()
     {
@@ -23,12 +25,15 @@ public class ObjectGrab : MonoBehaviour
                 if (currentItem != null)
                 {
                     currentItem.GetComponent<ItemInteraction>().lockedToPlayer = true;
+                    AudioManager.Instance.PlayClip(pickupSound);
+
                     heldItem = currentItem;
                 }
             }
             else
             {
                 heldItem.GetComponent<ItemInteraction>().lockedToPlayer = false;
+                AudioManager.Instance.PlayClip(throwSound);
 
                 if (GetComponent<SpriteRenderer>().flipX)
                 {
