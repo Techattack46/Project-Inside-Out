@@ -14,6 +14,8 @@ public class ItemInteraction : MonoBehaviour
     {
         if (lockedToPlayer)
         {
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            
             if (playerSprite.flipX)
             {
                 GetComponent<SpriteRenderer>().flipX = true;

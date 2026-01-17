@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class DummyDamage : MonoBehaviour
 {
+    public float currentHealth;
+    public float maxhealth;
+    public GameObject healthBarSlider;
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //if the dummy collides with an item...

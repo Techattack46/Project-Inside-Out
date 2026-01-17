@@ -872,15 +872,19 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_Color.r
-      value: 0.4980392
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -907,9 +911,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 288804642}
     - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: offset.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: offset.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: playerSprite
       value: 
       objectReference: {fileID: 288804643}
+    - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: dummyHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 90a200c8b723bfa4784db3af8aa8790c, type: 3}
+    - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      propertyPath: destroyedOnDummyHit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8387060048050378988, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.7
@@ -968,7 +988,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8387060048050378988, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1054504589}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
 --- !u!4 &451457859 stripped
@@ -1541,6 +1564,97 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 18, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1054504587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054504589}
+  - component: {fileID: 1054504588}
+  m_Layer: 0
+  m_Name: Health Bar Slider
+  m_TagString: Item
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1054504588
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054504587}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: 879c01bb83471644d92f3bed49dae7c1, type: 3}
+  m_Color: {r: 0.4980392, g: 1, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 1
+--- !u!4 &1054504589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054504587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 451457859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1174652693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1962,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287b8f9ee5c99b54f9941d608f2d00bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DummyDamage
+  currentHealth: 0
+  maxhealth: 10
+  healthBarSlider: {fileID: 1054504587}
 --- !u!1001 &1702491810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1910,7 +2027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8387060048050378988, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.954
+      value: -2.935
       objectReference: {fileID: 0}
     - target: {fileID: 8387060048050378988, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_LocalPosition.z
