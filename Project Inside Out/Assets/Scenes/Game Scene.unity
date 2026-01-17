@@ -1395,7 +1395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618191876973459544, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -1439,7 +1439,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 90a200c8b723bfa4784db3af8aa8790c, type: 3}
     - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: itemToDummyDamage
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7582852569513471823, guid: c1bd48cea06655e47aeaa0bea9d69cc2, type: 3}
       propertyPath: destroyedOnDummyHit
@@ -2143,7 +2143,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 879c01bb83471644d92f3bed49dae7c1, type: 3}
   m_Color: {r: 0.4980392, g: 1, b: 0, a: 1}
@@ -3310,12 +3310,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5117081799319214933, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
       propertyPath: levelMusic.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5117081799319214933, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
       propertyPath: 'levelMusic.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 7f1e02e4facfd40408b841f02181d8c7, type: 3}
+    - target: {fileID: 5117081799319214933, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
+      propertyPath: 'levelMusic.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a12970551c678a044b3ea6ae5775423a, type: 3}
     - target: {fileID: 5733837383095713682, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
       propertyPath: m_Name
       value: AudioManager

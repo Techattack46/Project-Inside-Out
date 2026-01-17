@@ -8,6 +8,7 @@ TagManager:
   - Dummy
   - Manager
   - Item
+  - UI
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DummyDamage : MonoBehaviour
 {
@@ -37,18 +39,22 @@ public class DummyDamage : MonoBehaviour
     {
         if (healthBarSlider.transform.localScale.x <= 0)
         {
-            EndGame();
+            StartCoroutine(EndGame(2));
         }
     }
 
-    private void EndGame()
+    private IEnumerator EndGame(float duration)
     {
         gameIsEnding = true;
         
         AudioManager.Instance.PlayClip(breakSound);
         transform.Rotate(0, 0, -60);
+        
+        GetComponent<Collider2D>().enabled = false;
 
-        //WaitForSeconds();
-        //SceneManager.LoadScene();
+        yield return new WaitForSeconds(duration);
+
+        AudioManager.Instance.LevelMusicIndex(1);
+        SceneManager.LoadScene(2);
     }
 }
