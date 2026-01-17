@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8387060048050378988}
   - component: {fileID: 4618191876973459544}
   - component: {fileID: 7582852569513471823}
+  - component: {fileID: -7053900329722350749}
   - component: {fileID: 469951894046111857}
   - component: {fileID: 5624196989619670916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -110,7 +111,23 @@ MonoBehaviour:
   playerSprite: {fileID: 0}
   offset: {x: 0, y: 0}
   lockedToPlayer: 0
+  itemToDummyDamage: 0
+  dummyHitSound: {fileID: 0}
   destroyedOnDummyHit: 1
+--- !u!114 &-7053900329722350749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713393749737753048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d612fa370fbf394f8340f5512c3dad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutOfBoundsFailSafe
+  horizontalEdge: 11
+  verticalEdge: 6
 --- !u!50 &469951894046111857
 Rigidbody2D:
   serializedVersion: 5
@@ -133,7 +150,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

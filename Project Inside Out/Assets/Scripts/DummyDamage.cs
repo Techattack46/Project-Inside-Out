@@ -2,30 +2,53 @@ using UnityEngine;
 
 public class DummyDamage : MonoBehaviour
 {
-    public float currentHealth;
-    public float maxhealth;
     public GameObject healthBarSlider;
+    public AudioClip breakSound;
+    public bool gameIsEnding = false;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if the dummy collides with an item...
+        ItemInteraction collidingItemProperties = collision.gameObject.GetComponent<ItemInteraction>();
+        
         if (collision.gameObject.CompareTag("Item"))
         {
-            //and that item is no longer locked to the player...
-            if (!collision.gameObject.GetComponent<ItemInteraction>().lockedToPlayer) 
+            if (!collidingItemProperties.lockedToPlayer) 
             {
-                AudioManager.Instance.PlayClip(collision.gameObject.GetComponent<ItemInteraction>().dummyHitSound);
-                
-                //the dummy takes damage
-                Debug.Log("Ouch!");
+                AudioManager.Instance.PlayClip(collidingItemProperties.dummyHitSound);
 
-                //then if the item's supposed to be destroyed on hit...
-                if (collision.gameObject.GetComponent<ItemInteraction>().destroyedOnDummyHit)
+                healthBarSlider.transform.localScale = new Vector2(
+                    healthBarSlider.transform.localScale.x - collidingItemProperties.itemToDummyDamage,
+                    healthBarSlider.transform.localScale.y);
+
+                if (collidingItemProperties.destroyedOnDummyHit)
                 {
-                    //do so
                     Destroy(collision.gameObject);
+                }
+
+                if (!gameIsEnding)
+                {
+                    EndGameCheck();
                 }
             }
         }
+    }
+
+    private void EndGameCheck()
+    {
+        if (healthBarSlider.transform.localScale.x <= 0)
+        {
+            EndGame();
+        }
+    }
+
+    private void EndGame()
+    {
+        gameIsEnding = true;
+        
+        AudioManager.Instance.PlayClip(breakSound);
+        transform.Rotate(0, 0, -60);
+
+        //WaitForSeconds();
+        //SceneManager.LoadScene();
     }
 }
